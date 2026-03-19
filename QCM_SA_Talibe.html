@@ -1841,7 +1841,7 @@ function handleAnswer(idx){
   fb.innerHTML=(ok?'<strong>✅ Correct !</strong> ':'<strong>❌ Incorrect.</strong> ')+q.expl;
   document.getElementById('nextBtn').textContent=curIdx<9?'Suivante →':'Voir les résultats';
   document.getElementById('nextWrap').style.display='block';
-  setTimeout(function(){ fb.scrollIntoView({behavior:'smooth',block:'nearest'}); },100);
+  setTimeout(function(){ document.getElementById('nextWrap').scrollIntoView({behavior:'smooth',block:'nearest'}); },200);
 }
 
 function nextQuestion(){ if(curIdx<9){ curIdx++; renderQ(); } else { clearInterval(timerInt); showResults(); } }
