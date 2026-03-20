@@ -1862,7 +1862,7 @@ function showResults(){
   html+='<div class="btn-row"><button class="btn btn-primary" onclick="startQuiz(currentDay)">Recommencer ce jour</button><button class="btn btn-secondary" onclick="goHome()">← Retour</button><button class="export-btn" onclick="exportScore()">📋 Copier le résultat</button><div class="export-msg" id="exportMsg">✅ Copié !</div></div><div id="sendMsg" style="display:none;text-align:center;margin-top:12px;font-size:14px;font-weight:600;"></div>';
   document.getElementById('resultsBody').innerHTML=html;
   showScreen('resultScreen');
-  if(!bestScores[currentDay]||bestScores[currentDay]===0){ sendToSheet(); }
+  sendToSheet();
 }
 
 
